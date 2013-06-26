@@ -7,7 +7,7 @@ import javax.media.opengl.*;
 import javax.media.opengl.awt.GLCanvas;
 import com.jogamp.opengl.util.*;
 
-public class MyJoglCanvasStep1 implements GLEventListener {
+public class TestJOGL implements GLEventListener {
 
     private double theta = 0;
     private double s = 0;
@@ -29,7 +29,7 @@ public class MyJoglCanvasStep1 implements GLEventListener {
             }
         });
 
-        canvas.addGLEventListener(new MyJoglCanvasStep1());
+        canvas.addGLEventListener(new TestJOGL());
 
         FPSAnimator animator = new FPSAnimator(canvas, 60);
         animator.add(canvas);

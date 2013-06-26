@@ -32,7 +32,10 @@
 						<compress/>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.xpressosystems.testjogl.MyJoglCanvasStep1</mainClass>
+							<!--
+							<mainClass>com.xpressosystems.testjogl.TestJOGL</mainClass>
+							-->
+							<mainClass>com.xpressosystems.testjogl.JOGL2Setup_GLCanvas</mainClass>
 							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>
 					</archive>

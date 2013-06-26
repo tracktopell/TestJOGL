@@ -82,7 +82,7 @@ public class JOGL2Nehe06Texture extends GLCanvas implements GLEventListener {
 
    // Texture
    private Texture texture;
-   private String textureFileName = "images/nehe.png";
+   private String textureFileName = "images/TextureRock_1.png";
    private String textureFileType = ".png";
 
    // Texture image flips vertically. Shall use TextureCoords class to retrieve the

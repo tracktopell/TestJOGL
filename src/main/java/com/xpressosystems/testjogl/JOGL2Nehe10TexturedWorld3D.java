@@ -231,7 +231,7 @@ public class JOGL2Nehe10TexturedWorld3D implements GLEventListener, KeyListener 
             gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
             gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-            BufferedImage globeBackground = ImageIO.read(this.getClass().getResource("/images/bergsjostolen_360.jpg"));
+            BufferedImage globeBackground = ImageIO.read(this.getClass().getResource("/images/150210_Texturify2.jpg"));
             globeBGTexture = AWTTextureIO.newTexture(GLProfile.getDefault(), globeBackground, true); // mipmap is true 
 
         } catch (GLException e) {
@@ -371,6 +371,7 @@ public class JOGL2Nehe10TexturedWorld3D implements GLEventListener, KeyListener 
         gl.glRotatef(lookUpAngle + 90, 1.0f, 0, 0);
         // Rotate rigth and left to look rigth and left
         gl.glRotatef(-lookSideAngle, 0, 0.0f, 1.0f);
+        gl.glRotatef(360.0f + headingY, 0, 0, 1.0f);
 
         
         glu.gluSphere(sphere1, radius, slices, stacks);        
@@ -402,24 +403,11 @@ public class JOGL2Nehe10TexturedWorld3D implements GLEventListener, KeyListener 
                 // Player move in, posX and posZ become smaller
                 posX -= (float) Math.sin(Math.toRadians(headingY)) * moveIncrement;
                 posZ -= (float) Math.cos(Math.toRadians(headingY)) * moveIncrement;
-
-                walkBiasAngle = (walkBiasAngle >= 359.0f) ? 0.0f : walkBiasAngle + 10.0f;
-                // What is this walkbias? It's a word I invented :-) It's basically an
-                // offset that occurs when a person walks around (head bobbing up and
-                // down like a buoy. It simply adjusts the camera's Y position with a
-                // sine wave. I had to put this in, as simply moving forwards and
-                // backwards didn't look to great.
-
-                // Causes the player to bounce in sine-wave pattern rather than
-                // straight-line
-                walkBias = (float) Math.sin(Math.toRadians(walkBiasAngle)) / 20.0f;
                 break;
             case VK_DOWN:
                 // Player move out, posX and posZ become bigger
                 posX += (float) Math.sin(Math.toRadians(headingY)) * moveIncrement;
                 posZ += (float) Math.cos(Math.toRadians(headingY)) * moveIncrement;
-                walkBiasAngle = (walkBiasAngle <= 1.0f) ? 359.0f : walkBiasAngle - 10.0f;
-                walkBias = (float) Math.sin(Math.toRadians(walkBiasAngle)) / 20.0f;
                 break;
             case KeyEvent.VK_NUMPAD8:
                 // player looks up, scene rotates in negative x-axis

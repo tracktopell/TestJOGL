@@ -231,7 +231,7 @@ public class JOGL2Nehe10TexturedWorld3D implements GLEventListener, KeyListener 
             gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
             gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-            BufferedImage globeBackground = ImageIO.read(this.getClass().getResource("/images/milkyway_610x305.jpg"));
+            BufferedImage globeBackground = ImageIO.read(this.getClass().getResource("/images/milkyway_4000x2000.jpg"));
             globeBGTexture = AWTTextureIO.newTexture(GLProfile.getDefault(), globeBackground, true); // mipmap is true 
 
         } catch (GLException e) {

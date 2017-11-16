@@ -12,6 +12,7 @@ RUN DEFAULT
 
 RUN EACH EXAMPLE
 
+	java -cp target/TestJOGL-1.0-SNAPSHOT.jar  com.xpressosystems.testjogl.JOGL2Nehe10TexturedWorld3D
 	java -cp target/TestJOGL-1.0-SNAPSHOT.jar  com.xpressosystems.testjogl.TestJOGL
 	java -cp target/TestJOGL-1.0-SNAPSHOT.jar  com.xpressosystems.testjogl.JOGL2Nehe02Basic2D
 	java -cp target/TestJOGL-1.0-SNAPSHOT.jar  com.xpressosystems.testjogl.JOGL2Nehe03Color

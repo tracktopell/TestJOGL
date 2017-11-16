@@ -35,7 +35,7 @@
 							<!--
 							<mainClass>com.xpressosystems.testjogl.TestJOGL</mainClass>
 							-->
-							<mainClass>com.xpressosystems.testjogl.JOGL2Setup_GLCanvas</mainClass>
+							<mainClass>com.xpressosystems.testjogl.JOGL2Nehe10TexturedWorld3D</mainClass>
 							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>
 					</archive>
